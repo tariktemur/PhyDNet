@@ -12,7 +12,8 @@ from data.moving_mnist import MovingMNIST
 from constrain_moments import K2M
 import argparse
 
-device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+# Changing default device to cuda:0 (it was cuda:1 originally) 
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--root', type=str, default='/dds/work/PrevisionsPV/codes/video_prediction/SBNet-for-video-prediction/dataset', help='folder for dataset')
